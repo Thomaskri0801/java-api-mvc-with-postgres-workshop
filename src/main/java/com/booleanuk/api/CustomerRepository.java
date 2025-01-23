@@ -134,5 +134,18 @@ public class CustomerRepository {
         }
         return customer;
     }
+
+    public void connectToDatabase() throws SQLException  {
+        PreparedStatement statement = this.connection.prepareStatement("SELECT * FROM Customers");
+
+        ResultSet results = statement.executeQuery();
+
+        while (results.next()) {
+            String id = "" + results.getLong("id");
+            String name = results.getString("name");
+            String address = results.getString("address");
+            System.out.println(id + " - " + name + " - " + address);
+        }
+    }
 }
 
