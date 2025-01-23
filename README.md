@@ -148,7 +148,7 @@ public class CustomerRepository {
 }
 ``` 
 
-10.  We also need to add a method called `connectToDatabase` which we can call to read all of the Customers table data into a variable called results which we then iterate through displaying the results as we go.
+10.  We're also going to add a method called `connectToDatabase` which we can call to read all of the Customers table data into a variable called results which we then iterate through displaying the results as we go. We will _NOT_ be using this after this point, this is just for us to test that the database connection is working as expected.
 
 ```java
 public void connectToDatabase() throws SQLException  {
